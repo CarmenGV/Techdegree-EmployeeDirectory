@@ -175,7 +175,6 @@ function dobFormat(dob){
 //HTML EMPLOYEE CARD GENERATOR
 function employeeCard(json){
   const data = json.results;
-  console.log(data);
   data.map(employee => {
     const cardDiv = document.createElement('div');
     cardDiv.className = "grid-item";
@@ -190,7 +189,7 @@ function employeeCard(json){
         <p>${capitalize(employee.location.state)}</p>
       </div>
     `;
-    cardDiv.addEventListener('click', empModal(employee));
+    cardDiv.addEventListener('click', () => empModal(employee));
   });
 }
 
