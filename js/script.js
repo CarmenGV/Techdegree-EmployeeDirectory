@@ -203,7 +203,7 @@ function empModal(employee){
     <p>${capitalize(employee.location.state)}</p>
     <hr/>
     <p>${employee.cell}</p>
-    <p>${capitalize(employee.location.street)}, ${stateAbbr(employee.location.state)} ${employee.location.postcode}</p>
+    <p>${employee.location.street.number} ${employee.location.street.name}, ${stateAbbr(employee.location.state)} ${employee.location.postcode}</p>
     <p>Birthday: ${dobFormat(employee.dob.date)}</p>
   `;
 }
